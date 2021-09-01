@@ -1,6 +1,4 @@
 import time
-import pytest
-from selenium import webdriver
 from pageObjects.LoginPage import Login
 from utilities.customLogger import LogGen
 from utilities.readProperties import ReadConfig
@@ -42,7 +40,7 @@ class Test_Login:
         login.clickLogin()
         time.sleep(2)
         act_title = self.driver.title
-        if act_title == 'Dashboard / nogit pCommerce administration':
+        if act_title == 'Dashboard / nopCommerce administration':
             self.logger.info("********************** Login test is passed **********************")
             self.driver.close()
             assert True
